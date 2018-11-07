@@ -170,6 +170,7 @@ PRODUCT_PACKAGES += \
     ueventd.mt6789.rc
 
 # Overlays
+PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
     FrameworkResOverlayArete \
     SystemUIResOverlayArete
