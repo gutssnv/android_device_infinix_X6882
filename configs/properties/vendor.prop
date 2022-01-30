@@ -147,6 +147,10 @@ ro.vendor.arm.egl.configs.r16_g16_b16_a16_64bit_float.framebuffer_target=false
 ro.vendor.arm.egl.configs.r8_g8_b8_a0_24bit_yuv_special.hal_format=0x23
 ro.vendor.arm.egl.configs.r8_g8_b8_a0_24bit_yuv_special.framebuffer_target=false
 
+# HWUI
+debug.hwui.target_cpu_time_percent=30
+debug.hwui.use_hint_manager=true
+
 # Incremental FS
 ro.incremental.enable=yes
 
