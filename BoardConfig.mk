@@ -21,6 +21,14 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
 
+# Bootloader
+TARGET_BOOTLOADER_BOARD_NAME := arete
+TARGET_NO_BOOTLOADER := true
+
+# Platform
+TARGET_BOARD_PLATFORM := mt6789
+BOARD_HAS_MTK_HARDWARE := true
+
 # Properties
 TARGET_PRODUCT_PROP += $(CONFIGS_PATH)/properties/product.prop
 TARGET_SYSTEM_PROP += $(CONFIGS_PATH)/properties/system.prop
