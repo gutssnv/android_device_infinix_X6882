@@ -65,7 +65,6 @@ on property:sys.boot_completed=1
 on fs
     # mount fstab
     mount_all --early
-    exec /system/bin/tune2fs -O has_journal -u 10010 -r 4096 /dev/block/by-name/userdata
 
 on late-fs
     mount_all --late
