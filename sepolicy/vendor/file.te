@@ -25,6 +25,9 @@ type proc_gesture_state, fs_type, proc_type, sysfs_type;
 type sysfs_OTG_STATE_file, fs_type, sysfs_type;
 type sysfs_OTG_CTL_file, fs_type, sysfs_type;
 
+# proc_compaction_proactiveness type
+type proc_compaction_proactiveness, fs_type, proc_type;
+
 # TNE
 type tneengine_tnek_file, dev_type, mlstrustedobject;
 
