@@ -271,6 +271,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light-service.lineage
 
+# Lineage-health
+$(call soong_config_set,lineage_health,charging_control_charging_disabled,1)
+$(call soong_config_set,lineage_health,charging_control_charging_enabled,0)
+$(call soong_config_set,lineage_health,charging_control_charging_path,/sys/devices/platform/charger/tran_aichg_disable_charger)
+$(call soong_config_set,lineage_health,charging_control_supports_bypass,true)
+
+PRODUCT_PACKAGES += \
+    vendor.lineage.health-service.default
+
 # Linker
 PRODUCT_VENDOR_LINKER_CONFIG_FRAGMENTS += \
     $(LOCAL_PATH)/configs/linker.config.json
