@@ -7,6 +7,8 @@ on early-init
     write /proc/sys/kernel/sched_pelt_multiplier 2
 
     # boot perf. tune
+    write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor "performance"
+    write /sys/devices/system/cpu/cpufreq/policy6/scaling_governor "performance"
 
 on charger
     # Lock to lowest frequency on charger mode
@@ -21,15 +23,6 @@ on charger
     write /sys/devices/system/cpu/cpu5/online 0
     write /sys/devices/system/cpu/cpu6/online 0
     write /sys/devices/system/cpu/cpu7/online 0
-
-on property:vendor.all.modules.ready=1
-    write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor "schedutil"
-    write /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us 500
-    write /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us 1000
-
-    write /sys/devices/system/cpu/cpufreq/policy6/scaling_governor "schedutil"
-    write /sys/devices/system/cpu/cpufreq/policy6/schedutil/up_rate_limit_us 500
-    write /sys/devices/system/cpu/cpufreq/policy6/schedutil/down_rate_limit_us 1000
 
 on init
     write /sys/devices/platform/soc/11270000.ufshci/clkgate_enable 0
@@ -97,6 +90,8 @@ on property:sys.boot_completed=1
     write /proc/sys/kernel/sched_migration_cost_ns 200000
 
     # restore boot perf. tune
+    write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor "schedutil"
+    write /sys/devices/system/cpu/cpufreq/policy6/scaling_governor "schedutil"
 
 # Configure clamps for standard task groups.
     # rt
