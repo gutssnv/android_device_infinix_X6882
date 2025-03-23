@@ -14,6 +14,12 @@ from extract_utils.main import (
     ExtractUtilsModule,
 )
 
+namespace_imports = [
+    'device/infinix/X6882',
+    'hardware/mediatek',
+    'hardware/mediatek/libmtkperf_client',
+]
+
 blob_fixups: blob_fixups_user_type = {
     ('vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service', 'vendor/lib64/hw/mt6789/vendor.mediatek.hardware.pq@2.15-impl.so'): blob_fixup()
         .replace_needed('libhidlbase.so', 'libhidlbase-v31.so')
@@ -41,6 +47,7 @@ module = ExtractUtilsModule(
     'X6882',
     'infinix',
     blob_fixups=blob_fixups,
+    namespace_imports=namespace_imports,
 )
 
 if __name__ == '__main__':
