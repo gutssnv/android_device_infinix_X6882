@@ -162,6 +162,10 @@ PRODUCT_PACKAGES += \
     FrameworkResOverlayArete \
     SystemUIResOverlayArete
 
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.lights-service.transsion
+
 # Keymaster
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.keystore.app_attest_key.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.keystore.app_attest_key.xml

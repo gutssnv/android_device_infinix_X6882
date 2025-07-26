@@ -71,6 +71,9 @@ ro.hardware.gatekeeper=trustonic
 ro.crypto.volume.filenames_mode=aes-256-cts
 ro.hardware.kmsetkey=trustonic
 
+# Lights
+ro.vendor.transsion.backlight_12bit=1
+
 # Sensors
 ro.vendor.mtk.sensor.support=yes
 
