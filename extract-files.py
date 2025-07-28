@@ -68,6 +68,7 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libbinder.so', 'libbinder-v31.so')
         .replace_needed('libutils.so', 'libutils-v31.so'),
     'vendor/lib64/hw/mt6789/android.hardware.camera.provider@2.6-impl-mediatek.so': blob_fixup()
+        .replace_needed('libutils.so', 'libutils-v31.so')
         .add_needed('libcamera_metadata_shim.so'),
 }  # fmt: skip
 
