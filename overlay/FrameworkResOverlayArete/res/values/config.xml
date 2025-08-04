@@ -365,4 +365,7 @@
          manually by the user. Off by default, since the expected haptic feedback may not be
          available on some devices. -->
     <bool name="config_enableHapticTextHandle">true</bool>
+
+    <!-- Whether device uses power button fingerprint sensor or not -->
+    <bool name="config_is_powerbutton_fps">true</bool>
 </resources>
