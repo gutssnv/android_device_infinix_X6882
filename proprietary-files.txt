@@ -1,9 +1,5 @@
 # Pinned blobs from x6882_infinix-user 14 UP1A.231005.007 987326 release-keys
 
-# AEE
-vendor/lib/libaedv.so
-vendor/lib64/libaedv.so
-
 # APU
 -vendor/etc/vintf/manifest/manifest_apuware_apusys.xml
 -vendor/etc/vintf/manifest/manifest_apuware_hmp.xml
