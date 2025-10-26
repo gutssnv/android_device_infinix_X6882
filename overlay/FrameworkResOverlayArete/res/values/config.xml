@@ -390,4 +390,7 @@
           <item>1115</item>  <!-- sensorLocationY -->
           <item>205</item>  <!-- sensorRadius -->
      </array>
+
+     <!-- Whether device supports double tap to wake -->
+     <bool name="config_supportDoubleTapWake">true</bool>
 </resources>
