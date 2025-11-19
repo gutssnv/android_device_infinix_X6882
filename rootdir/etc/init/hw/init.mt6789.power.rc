@@ -112,12 +112,15 @@ on property:sys.boot_completed=1
     write /dev/cpuctl/rt/cpu.uclamp.min 0
     write /dev/cpuctl/rt/cpu.shares 20480
 
+    # system
+    write /dev/cpuctl/system/cpu.shares 20480
+
     # system-background
     # cap the max utilisation for system-background tasks to save power.
     write /dev/cpuctl/system/cpu.uclamp.latency_sensitive 0
     write /dev/cpuctl/system-background/cpu.uclamp.max 60
     write /dev/cpuctl/system-background/cpu.uclamp.min 0
-    write /dev/cpuctl/system-background/cpu.shares 2048
+    write /dev/cpuctl/system-background/cpu.shares 1024
 
     # background
     write /dev/cpuctl/background/cpu.uclamp.latency_sensitive 0
@@ -129,13 +132,13 @@ on property:sys.boot_completed=1
     write /dev/cpuctl/foreground/cpu.uclamp.max max
     write /dev/cpuctl/foreground/cpu.uclamp.min 0
     write /dev/cpuctl/foreground/cpu.uclamp.latency_sensitive 1
-    write /dev/cpuctl/foreground/cpu.shares 10240
+    write /dev/cpuctl/foreground/cpu.shares 20480
 
     # foreground_window
     write /dev/cpuctl/foreground_window/cpu.uclamp.max max
     write /dev/cpuctl/foreground_window/cpu.uclamp.min 0
     write /dev/cpuctl/foreground_window/cpu.uclamp.latency_sensitive 1
-    write /dev/cpuctl/foreground_window/cpu.shares 10240
+    write /dev/cpuctl/foreground_window/cpu.shares 20480
 
     # top-app
     write /dev/cpuctl/top-app/cpu.uclamp.max max
@@ -158,7 +161,7 @@ on property:sys.boot_completed=1
     write /dev/cpuctl/dex2oat/cpu.uclamp.latency_sensitive 0
     write /dev/cpuctl/dex2oat/cpu.uclamp.max 60
     write /dev/cpuctl/dex2oat/cpu.uclamp.min 0
-    write /dev/cpuctl/dex2oat/cpu.shares 2048
+    write /dev/cpuctl/dex2oat/cpu.shares 512
 
     # Uclamp tuning
     write /proc/sys/kernel/sched_util_clamp_min_rt_default 96
