@@ -11,6 +11,10 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/vabc_features.mk)
 
+ifeq ($(WITH_GMS),true)
+PRODUCT_VENDOR_PROPERTIES += ro.virtual_ab.compression.threads=true
+endif
+
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS := \
     boot \
