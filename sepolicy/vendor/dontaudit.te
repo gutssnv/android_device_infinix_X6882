@@ -4,6 +4,7 @@ dontaudit {
 } shell_data_file:dir search;
 
 dontaudit ueventd tranfs_block_device:blk_file rw_file_perms;
+dontaudit hal_power_default self:capability dac_override;
 
 dontaudit {
   hal_camera_default
