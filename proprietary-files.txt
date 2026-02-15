@@ -1185,11 +1185,6 @@ vendor/etc/VideoLog_dynamic.xml
 vendor/lib/egl/egl.cfg
 vendor/lib/mt6789/arm.graphics-V1-ndk_platform.so;SYMLINK=vendor/lib/arm.graphics-V1-ndk_platform.so
 vendor/lib/mt6789/libmtk_drvb.so;SYMLINK=vendor/lib/libmtk_drvb.so
-vendor/lib64/egl/libGLES_meow.so
-vendor/lib64/egl/libMEOW_data.so
-vendor/lib64/egl/libMEOW_gift.so
-vendor/lib64/egl/libMEOW_qt.so
-vendor/lib64/egl/libMEOW_trace.so
 vendor/lib64/egl/mt6789/libGLES_mali.so;SYMLINK=vendor/lib64/egl/libGLES_mali.so
 vendor/lib64/hw/hwcomposer.mtk_common.so
 vendor/lib64/hw/mt6789/android.hardware.graphics.allocator@4.0-impl-mediatek.so;SYMLINK=vendor/lib64/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so
@@ -1201,9 +1196,6 @@ vendor/lib64/libaal_cust.so
 vendor/lib64/libaal_key.so
 vendor/lib64/libaal_mtk.so
 vendor/lib64/libdre.so
-vendor/lib64/libDefaultFpsActor.so
-vendor/lib64/libFrameRecord.so
-vendor/lib64/libNoFpsActor.so
 vendor/lib64/libOpenCL.so
 vendor/lib64/libcomposer_ext.so
 vendor/lib64/libged.so
