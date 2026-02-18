@@ -135,6 +135,8 @@ blob_fixups: blob_fixups_user_type = {
     ('vendor/lib64/libcodec2_mtk_vdec.so', 'vendor/lib64/libcodec2_mtk_venc.so'): blob_fixup()
         .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so')
         .replace_needed('libformatter.so', 'libformatter_mtk.so'),
+    'vendor/etc/init/init.volte_md_status.rc': blob_fixup()
+        .binary_regex_replace(b'system/vendor', b'vendor'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
