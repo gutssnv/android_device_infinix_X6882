@@ -9,6 +9,11 @@ from extract_utils.fixups_blob import (
     blob_fixups_user_type,
 )
 
+from extract_utils.fixups_lib import (
+    lib_fixups,
+    lib_fixups_user_type,
+)
+
 from extract_utils.main import (
     ExtractUtils,
     ExtractUtilsModule,
@@ -20,6 +25,21 @@ namespace_imports = [
     'hardware/mediatek/libmtkperf_client',
     'hardware/mediatek/libaedv',
 ]
+
+def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
+    return f'{lib}_{partition}' if partition == 'vendor' else None
+
+lib_fixups: lib_fixups_user_type = {
+    **lib_fixups,
+    (
+        'libtflite_mtk',
+        'libneuron_graph_delegate.mtk',
+        'vendor.mediatek.hardware.apuware.apusys@2.0',
+        'vendor.mediatek.hardware.apuware.apusys@2.1',
+        'vendor.mediatek.hardware.apuware.hmp@1.0',
+        'vendor.mediatek.hardware.apuware.utils@2.0'
+    ): lib_fixup_vendor_suffix,
+}
 
 blob_fixups: blob_fixups_user_type = {
     ('vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service', 'vendor/lib64/hw/mt6789/vendor.mediatek.hardware.pq@2.15-impl.so'): blob_fixup()
@@ -112,6 +132,7 @@ module = ExtractUtilsModule(
     'X6882',
     'infinix',
     blob_fixups=blob_fixups,
+    lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
     add_firmware_proprietary_file=True,
 )
