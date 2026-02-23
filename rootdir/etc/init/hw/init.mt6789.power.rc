@@ -93,10 +93,12 @@ on property:sys.boot_completed=1
 
     # Enable ZRAM on boot_complete
     swapon_all /vendor/etc/fstab.mt6789
-    write /proc/sys/vm/swappiness 60
 
     write /sys/devices/platform/soc/11270000.ufshci/clkgate_enable 1
     write /proc/sys/kernel/sched_migration_cost_ns 200000
+
+    # Back to default VM settings
+    write /proc/sys/vm/dirty_expire_centisecs 3000
 
     # restore boot perf. tune
     write /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq 0
