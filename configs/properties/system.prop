@@ -32,7 +32,12 @@ dalvik.vm.image-dex2oat-threads=6
 # Graphics
 ro.opengles.version=196610
 
-# Iorap
+# IMS
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
+
+# Iorapd
 iorapd.perfetto.enable=false
 iorapd.readahead.enable=false
 persist.device_config.runtime_native_boot.iorap_readahead_enable=false
