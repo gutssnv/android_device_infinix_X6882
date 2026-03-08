@@ -7,15 +7,8 @@ on early-init
     write /proc/sys/kernel/sched_pelt_multiplier 2
 
     # boot perf. tune
-    write /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq 2000000
-    write /sys/devices/system/cpu/cpufreq/policy6/scaling_min_freq 2200000
-    write /sys/class/devfreq/mtk-dvfsrc-devfreq/userspace/set_freq 4266000000
 
 on charger
-    write /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq 0
-    write /sys/devices/system/cpu/cpufreq/policy6/scaling_min_freq 0
-    write /sys/class/devfreq/mtk-dvfsrc-devfreq/userspace/set_freq 0
-    
     # Lock to lowest frequency on charger mode
     write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor powersave
     write /sys/devices/system/cpu/cpufreq/policy6/scaling_governor powersave
@@ -104,9 +97,6 @@ on property:sys.boot_completed=1
     write /proc/sys/kernel/sched_migration_cost_ns 200000
 
     # restore boot perf. tune
-    write /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq 0
-    write /sys/devices/system/cpu/cpufreq/policy6/scaling_min_freq 0
-    write /sys/class/devfreq/mtk-dvfsrc-devfreq/userspace/set_freq 0
 
 # Configure clamps for standard task groups.
     # rt
