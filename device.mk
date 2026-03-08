@@ -309,6 +309,9 @@ PRODUCT_PACKAGES += \
     TetheringResOverlayArete \
     WifiResOverlayArete
 
+PRODUCT_PACKAGES += \
+    NcmTetheringOverlay
+
 # Lineage-Specific Overlays
 PRODUCT_PACKAGES += \
     ApertureOverlay
