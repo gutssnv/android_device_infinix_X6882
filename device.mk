@@ -138,7 +138,17 @@ PRODUCT_COPY_FILES += \
     system/core/libprocessgroup/profiles/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
 
 # Dalvik configs
-$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
+PRODUCT_PRODUCT_PROPERTIES += \
+    dalvik.vm.heapstartsize?=16m \
+    dalvik.vm.heapgrowthlimit?=256m \
+    dalvik.vm.heapsize?=512m \
+    dalvik.vm.heaptargetutilization?=0.5 \
+    dalvik.vm.heapminfree?=8m \
+    dalvik.vm.heapmaxfree?=32m \
+    dalvik.vm.madvise.vdexfile.size?=31457280 \
+    dalvik.vm.madvise.odexfile.size?=31457280 \
+    dalvik.vm.madvise.artfile.size?=0 \
+    ro.lmk.medium?=700
 
 # Display
 PRODUCT_PACKAGES += \
