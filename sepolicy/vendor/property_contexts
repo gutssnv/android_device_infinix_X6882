@@ -47,6 +47,9 @@ persist.vendor.sys.fp.fod.size.width_height    u:object_r:vendor_fingerprint_pro
 # Key manager
 ro.mtk_key_manager_support                  u:object_r:vendor_mtk_default_prop:s0
 
+# MNLD
+ro.vendor.lgsys.utype          u:object_r:vendor_mtk_mnld_prop:s0
+
 # NFC properties
 persist.vendor.nfc.            u:object_r:vendor_nfc_prop:s0
 

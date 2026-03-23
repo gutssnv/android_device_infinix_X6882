@@ -130,6 +130,7 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/librt_extamp_intf.so': blob_fixup()
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     'vendor/bin/mnld': blob_fixup()
+        .binary_regex_replace(b'ro.logsystem.usertype', b'ro.vendor.lgsys.utype')
         .replace_needed('libmnl.so', 'libmnl_mtk.so')
         .replace_needed('libsensorndkbridge.so', 'android.hardware.sensors@1.0-convert-shared.so'),
     ('vendor/lib64/libcodec2_mtk_vdec.so', 'vendor/lib64/libcodec2_mtk_venc.so'): blob_fixup()
