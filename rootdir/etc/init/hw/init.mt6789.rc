@@ -294,16 +294,6 @@ on post-fs-data
     chmod 0440 /dev/mcupm
     chown root system /dev/mcupm
 
-    #EM of MT6360
-    chmod 0664 sys/kernel/debug/rt-regmap/mt6360_pmu.5-0034/data
-    chmod 0664 sys/kernel/debug/rt-regmap/mt6360_pmic.5-001a/data
-    chmod 0664 sys/kernel/debug/rt-regmap/mt6360_ldo.5-0064/data
-    chmod 0664 sys/kernel/debug/rt-regmap/mt6360-4e/data
-    chmod 0664 sys/kernel/debug/rt-regmap/mt6360_pmu.5-0034/reg_addr
-    chmod 0664 sys/kernel/debug/rt-regmap/mt6360_pmic.5-001a/reg_addr
-    chmod 0664 sys/kernel/debug/rt-regmap/mt6360_ldo.5-0064/reg_addr
-    chmod 0664 sys/kernel/debug/rt-regmap/mt6360-4e/reg_addr
-
 	#widevine driver node
 	chmod 0660 /dev/drm_wv
 	chown media system /dev/drm_wv
