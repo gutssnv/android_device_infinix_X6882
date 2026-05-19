@@ -302,6 +302,13 @@ PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor:64 \
     libtextclassifier_hash.vendor:64
 
+# MM
+PRODUCT_PACKAGES += \
+    init.zram.rc
+
+PRODUCT_COPY_FILES += \
+    hardware/google/pixel/mm/fstab.zram.40p:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.zram
+
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc-service.nxp \
