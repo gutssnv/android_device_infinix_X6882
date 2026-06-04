@@ -1,4 +1,7 @@
 on early-init
+    # Reduce Kernel Printk logging
+    write /proc/sys/kernel/printk "4 4 1 7"
+
     # Reset PELT multiplier from boot-time 4x (cmdline) to 2x (16ms half-life)
     write /proc/sys/kernel/sched_pelt_multiplier 2
 
