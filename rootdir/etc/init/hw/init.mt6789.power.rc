@@ -98,6 +98,14 @@ on property:sys.boot_completed=1
     write /sys/block/sdc/queue/nr_requests 64
     write /sys/block/sdc/queue/iostats 1
 
+    # Adjust block device queue parameters
+    write /sys/block/sda/queue/add_random 0
+    write /sys/block/sdb/queue/add_random 0
+    write /sys/block/sdc/queue/add_random 0
+    write /sys/block/sda/queue/rq_affinity 2
+    write /sys/block/sdb/queue/rq_affinity 2
+    write /sys/block/sdc/queue/rq_affinity 2
+
     # Enable ZRAM on boot_complete
     swapon_all /vendor/etc/fstab.mt6789
 
