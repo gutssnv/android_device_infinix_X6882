@@ -1,6 +1,7 @@
 on early-init
-    # Reduce Kernel Printk logging
+    # Reduce Kernel Printk logging and Kill Battery first_usage_date
     write /proc/sys/kernel/printk "4 4 1 7"
+    chmod 000 /sys/class/power_supply/battery/first_usage_date
 
     # boot perf. tune
     write /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq 2000000
