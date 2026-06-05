@@ -1,6 +1,7 @@
 on early-init
-    # Reduce Kernel Printk logging
+    # Reduce Kernel Printk logging and Kill Battery first_usage_date
     write /proc/sys/kernel/printk "4 4 1 7"
+    chmod 000 /sys/class/power_supply/battery/first_usage_date
 
     # Reset PELT multiplier from boot-time 4x (cmdline) to 2x (16ms half-life)
     write /proc/sys/kernel/sched_pelt_multiplier 2
