@@ -19,6 +19,12 @@ on init
     write /proc/sys/net/core/rmem_max 8388608
 
    # Setup runtime blkio
+    # Make foreground and background I/O priority different. none-to-rt was
+    # introduced in kernel 5.14. promote-to-rt was introduced in kernel 6.5.
+    # Write none-to-rt first and promote-to-rt next to support both older and
+    # newer kernel versions.
+    write /dev/blkio/blkio.prio.class none-to-rt
+    write /dev/blkio/blkio.prio.class promote-to-rt
     write /dev/blkio/blkio.weight 1000
     write /dev/blkio/background/blkio.weight 200
     write /dev/blkio/blkio.group_idle 2000
