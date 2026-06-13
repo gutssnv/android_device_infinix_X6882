@@ -407,6 +407,10 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.3.vendor:64 \
     android.hardware.radio@1.6.vendor:64
 
+PRODUCT_PACKAGES += \
+    mdota_symlink
+
+
 # Required for QPR3
 PRODUCT_PACKAGES += \
     libexpat.vendor \
