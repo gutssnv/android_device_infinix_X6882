@@ -33,6 +33,9 @@ on init
     write /sys/devices/platform/soc/11270000.ufshci/clkgate_enable 0
     write /proc/sys/kernel/sched_util_clamp_min_rt_default 0
 
+   # Set teo as cpu idle governor
+    write /sys/devices/system/cpu/cpuidle/current_governor teo
+
     # update cpus for cpuset cgroup
     write /dev/cpuset/foreground/cpus 0-7
     write /dev/cpuset/foreground_window/cpus 0-7
