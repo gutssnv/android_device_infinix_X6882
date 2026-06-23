@@ -23,6 +23,9 @@ on init
     write /sys/devices/platform/soc/11270000.ufshci/clkgate_enable 0
     write /proc/sys/kernel/sched_util_clamp_min_rt_default 0
 
+    # Set teo as cpu idle governor
+    write /sys/devices/system/cpu/cpuidle/current_governor teo
+
     # I/O scheduler: mq-deadline for UFS (lower latency, faster boot than BFQ)
     write /sys/block/sda/queue/scheduler mq-deadline
     write /sys/block/sdb/queue/scheduler mq-deadline
