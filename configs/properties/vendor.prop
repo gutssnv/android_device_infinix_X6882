@@ -316,3 +316,6 @@ ro.vendor.mtk_trustonic_tee_support=1
 
 # Virtual A/B
 ro.virtual_ab.compression.threads=true
+
+# USB
+vendor.usb.controller=musb-hdrc

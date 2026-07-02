@@ -59,13 +59,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.mt6789.usb.rc",
-    src: "etc/init/hw/init.mt6789.usb.rc",
-    relative_install_path: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
     name: "init.mtkgki.rc",
     src: "etc/init/hw/init.mtkgki.rc",
     relative_install_path: "init/hw",
