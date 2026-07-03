@@ -262,7 +262,6 @@
       "Path": "/sys/kernel/ged/hal/timer_base_dvfs_margin",
       "Values": [
         "798",
-        "18743356",
         "50"
       ],
       "DefaultIndex": 0,
@@ -272,8 +271,8 @@
       "Name": "GpuDvfsLoadingStep",
       "Path": "/sys/kernel/ged/hal/loading_base_dvfs_step",
       "Values": [
+        "259",
         "4",
-        "771",
         "15"
       ],
       "DefaultIndex": 0,
@@ -481,13 +480,13 @@
       "PowerHint": "LAUNCH",
       "Node": "GpuDvfsTimerMargin",
       "Duration": 2000,
-      "Value": "18743356"
+      "Value": "50"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "GpuDvfsLoadingStep",
       "Duration": 2000,
-      "Value": "771"
+      "Value": "4"
     },
     {
       "PowerHint": "CAMERA_LAUNCH",
