@@ -324,6 +324,18 @@
   ],
   "Actions": [
     {
+      "PowerHint": "DISPLAY_CHANGE",
+      "Node": "CPUEfficiencyClusterMinFreq",
+      "Duration": 1250,
+      "Value": "2000000"
+    },
+    {
+      "PowerHint": "DISPLAY_CHANGE",
+      "Node": "CPUSuperClusterMinFreq",
+      "Duration": 1250,
+      "Value": "2000000"
+    },
+    {
       "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
       "Node": "PowerHALAudioState",
       "Duration": 0,
