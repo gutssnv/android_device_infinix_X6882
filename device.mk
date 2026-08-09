@@ -146,6 +146,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
     dalvik.vm.heapmaxfree=48m
 
 # Display
+$(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
+
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.3-service \
     android.hardware.memtrack-service.mediatek
