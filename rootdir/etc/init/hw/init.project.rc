@@ -118,18 +118,3 @@ on property:sys.boot_completed=1
     write /dev/cpuctl/top-app/cpu.shares 5120
     write /dev/cpuctl/foreground/cpu.shares 4196
     #SPD: add for watermark_scale_factor at 20231216 start
-    #SPD: add for control dex2oat cpu by fan.feng1 20230619 start
-    write /dev/cpuset/dex2oat/cpus 0-3
-    write /dev/cpuctl/dex2oat/cpu.shares 512
-    setprop persist.vendor.powerhal.dex2oat_threads 4
-    #SPD: add for control dex2oat cpu by fan.feng1 20230619 end
-
-#SPD: modify for swap zram write-back by zihan.ju at 20230922 start
-on property:sys.boot_completed=1 && property:persist.vendor.swapfile_enable=true && property:ro.vendor.memfusion2_2.support=true
-    swapon_all /vendor/etc/memfusion2/fstab.enableswap_wb
-#SPD: modify for swap zram write-back by zihan.ju at 20230922 end
-
-#BSP add for mistouch reinit by longtao.ran 20231017 start
-on property:sys.boot_completed=1
-        write /proc/tran_edge_level  ${persist.sys.mistouch.mode}
-#BSP add for mistouch reinit by longtao.ran 20231017 end
