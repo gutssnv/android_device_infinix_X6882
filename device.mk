@@ -473,6 +473,7 @@ PRODUCT_PACKAGES += \
     libtranlog
 
 # Shipping API level
+BOARD_SHIPPING_API_LEVEL := 31
 PRODUCT_SHIPPING_API_LEVEL := 33
 
 # Soong namespaces
