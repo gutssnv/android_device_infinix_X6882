@@ -180,6 +180,11 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Enable DM file pre-opting to reduce first boot time
 PRODUCT_DEX_PREOPT_GENERATE_DM_FILES := true
 
+# Enable whole-program R8 Java optimizations for SystemUI and system_server,
+# but also allow explicit overriding for testing and development.
+SYSTEM_OPTIMIZE_JAVA := true
+SYSTEMUI_OPTIMIZE_JAVA := true
+
 # Enforce generic ramdisk allow list
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 
