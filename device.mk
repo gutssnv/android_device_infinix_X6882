@@ -164,6 +164,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ANGLE
 
+# Dolby
+$(call inherit-product, hardware/dolby/dolby.mk)
+
 # DRM
 PRODUCT_PACKAGES += \
     com.android.hardware.drm.clearkey
