@@ -17,6 +17,9 @@ vendor.streamout.pcm.dump=0
 vendor.usbsph.dl.pcm.dump=0
 vendor.usbsph.srcaws.pcm.dump=0
 vendor.usbsph.ul.pcm.dump=0
+ro.audio.spatializer_enabled=true
+ro.vendor.audio.dolby.dax.support=true
+ro.vendor.audio.dolby.surround.enable=true
 
 # Bluetooth
 ro.vendor.bluetooth.a2dp_aac_vbr.is_disabled=true
