@@ -1199,8 +1199,6 @@ vendor/lib64/libcomposer_ext.so
 vendor/lib64/libged.so
 vendor/lib64/libgpu_aux.so
 vendor/lib64/libgpud.so
-vendor/lib64/libion_mtk.so
-vendor/lib64/libion_ulit.so
 vendor/lib64/libmml.so
 vendor/lib64/libpqframework.so
 vendor/lib64/libudf.so
@@ -1497,8 +1495,6 @@ vendor/lib/libh264dec_sd.ca7.so;DISABLE_CHECKELF
 vendor/lib/libh264dec_se.ca7.so;DISABLE_CHECKELF
 vendor/lib/libh264enc_sa.ca7.so;DISABLE_CHECKELF
 vendor/lib/libhevce_sb.ca7.android.so;DISABLE_CHECKELF
-vendor/lib/libion_mtk.so
-vendor/lib/libion_ulit.so
 vendor/lib/libmp4enc_sa.ca7.so;DISABLE_CHECKELF
 vendor/lib/libmp4enc_xa.ca7.so;DISABLE_CHECKELF
 vendor/lib/libvp8dec_sa.ca7.so;DISABLE_CHECKELF
