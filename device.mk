@@ -10,6 +10,7 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/vabc_features.mk)
+$(call soong_config_set,update_engine,map_vabc_in_recovery,true)
 
 ifeq ($(WITH_GMS),true)
 PRODUCT_VENDOR_PROPERTIES += ro.virtual_ab.compression.threads=true
