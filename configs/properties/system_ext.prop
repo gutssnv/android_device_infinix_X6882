@@ -1,0 +1,5 @@
+# Radio
+ro.vendor.mtk_cta_set=1
+ro.vendor.mtk_telephony_add_on_policy=0
+vendor.rild.libargs=-d /dev/ttyC0
+vendor.rild.libpath=mtk-ril.so
