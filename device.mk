@@ -241,7 +241,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.lights-service.transsion
+    android.hardware.light-service.lineage
 
 # Keylayout
 PRODUCT_COPY_FILES += \
@@ -486,7 +486,7 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator-service.transsion
+    android.hardware.vibrator-service.mediatek
 
 # VNDK
 PRODUCT_PACKAGES += \
