@@ -5,16 +5,6 @@ import /vendor/etc/init/hw/init.mtkgki.rc
 on init
     mkdir /mnt/media_rw/usbotg 0700 media_rw media_rw
     mkdir /storage/usbotg 0700 root root
-    write /sys/kernel/tracing/buffer_size_kb 10240
-    write /sys/kernel/tracing/events/enable 0
-    write /sys/kernel/tracing/options/trace_printk 0
-    write /sys/kernel/tracing/events/ufs/ufshcd_command/enable 1
-    write /sys/kernel/tracing/events/ufs/ufshcd_upiu/enable 1
-    write /sys/kernel/tracing/events/ufs/ufshcd_uic_command/enable 1
-    write /sys/kernel/tracing/events/ufs/ufshcd_clk_gating/enable 1
-    write /sys/kernel/tracing/events/block/block_rq_issue/enable 1
-    write /sys/kernel/tracing/events/block/block_rq_complete/enable 1
-    write /sys/kernel/tracing/tracing_on 1
 
 on post-fs-data
 
