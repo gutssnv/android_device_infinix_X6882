@@ -102,8 +102,3 @@ on property:sys.boot_completed=1
     write /sys/kernel/tracing/instances/mmstat/buffer_size_kb 16
     write /sys/kernel/tracing/instances/mmstat/events/mmstat/enable 1
     write /sys/kernel/tracing/instances/mmstat/tracing_on 1
-    #SPD: add for watermark_scale_factor at 20231216 start
-    write /proc/sys/vm/watermark_scale_factor 200
-    write /dev/cpuctl/top-app/cpu.shares 5120
-    write /dev/cpuctl/foreground/cpu.shares 4196
-    #SPD: add for watermark_scale_factor at 20231216 start
