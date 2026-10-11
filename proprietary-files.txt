@@ -1437,7 +1437,6 @@ vendor/bin/kmsetkey_ca.trustonic
 vendor/etc/init/trustonic.mc_kmsetkey_ca.rc
 vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc
 vendor/lib/libthha.so;DISABLE_CHECKELF
-vendor/lib/hw/kmsetkey.trustonic.so;SYMLINK=vendor/lib64/hw/kmsetkey.default.so
 vendor/lib/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so
 vendor/lib/libdecrypt.so
 vendor/lib/vendor.mediatek.hardware.keymaster_attestation@1.0.so
