@@ -73,6 +73,23 @@ vendor.camera.mdp.cz.enable=1
 vendor.camera.mdp.dre.enable=1
 vendor.mtk.camera.app.fd.video=1
 
+# Charger
+ro.vendor.mtk_fast_charging_support=1
+
+# Connsys
+persist.vendor.connsys.chipid=-1
+persist.vendor.connsys.dynamic.dump=0
+persist.vendor.connsys.patch.version=-1
+ro.vendor.builtin_fm_antenna_support=1
+ro.vendor.connsys.dedicated.log=1
+ro.vendor.connsys.dedicated.log.port=bt,wifi,gps,mcu
+vendor.connsys.driver.ready=no
+
+# DRM
+drm.service.enabled=true
+ro.vendor.mtk_tee_gp_support=1
+ro.vendor.mtk_widevine_drm_l1_support=1
+
 # Display
 ro.surface_flinger.uclamp.min=130
 ro.hardware.egl=meow
@@ -176,10 +193,7 @@ ro.vendor.mgk_name=mgk_64_entry_level_k510
 ro.vendor.mtk_prefer_64bit_proc=0
 
 # MTE
-arm64.memtag.process.system_server=off
-
-# MTE
-arm64.memtag.process.system_server=off
+persist.arm64.memtag.system_server=off
 
 # Neural Networks
 debug.mtk_tflite.target_nnapi=29
@@ -245,7 +259,7 @@ ro.vendor.mtk.sensor.support=yes
 
 # SoC
 ro.soc.manufacturer=Mediatek
-ro.soc.model=MT6789V/CD
+ro.soc.model=MT6789H
 
 # SurfaceFlinger
 ro.surface_flinger.primary_display_orientation=ORIENTATION_0
