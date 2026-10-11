@@ -1,40 +1,40 @@
 # Audio
 persist.vendor.anr.dumpthr=1
-ro.audio.usb.period_us=16000
-ro.config.vc_call_vol_steps=9
 ro.audio.silent=0
+ro.audio.usb.period_us=16000
 ro.camera.sound.forced=0
-ro.config.media_vol_default=13
 ro.config.alarm_vol_default=13
+ro.config.media_vol_default=13
 ro.config.system_vol_default=15
+ro.config.vc_call_vol_steps=9
 
 # Blur
 ro.sf.blurs_are_expensive=1
 ro.surface_flinger.supports_background_blur=1
 
-# Dalvik
+# Dex
 dalvik.vm.dex2oat64.enabled=true
 
 # Graphics
 ro.opengles.version=196610
 
+# Iorap
+ro.iorapd.enable=false
+
 # IPO
 sys.ipo.disable=1
 sys.ipo.pwrdncap=2
 
-# Iorap
-ro.iorapd.enable=false
-
 # Kernel
 ro.kernel.zio=38,108,105,16
+
+# Low Memory Killer
+ro.config.per_app_memcg=false
 
 # Media
 media.stagefright.thumbnail.prefer_hw_codecs=true
 ro.vendor.mtk_flv_playback_support=1
 vendor.mtk_thumbnail_optimization=true
-
-# Memory Optimization
-ro.config.per_app_memcg=false
 
 # Performance
 security.perf_harden=1
@@ -42,13 +42,11 @@ security.perf_harden=1
 # Radio
 persist.sys.radio.force_lte_ca=true
 
-# Thermal Management
+# Thermal
 persist.thermal_config.mitigation=1
-ro.mtk_thermal_monitor.enabled=true
-
-# Thermal Configuration
 ro.config.thermal_dcs=40
 ro.config.thermal_limit=75
+ro.mtk_thermal_monitor.enabled=true
 
 # Zygote
 zygote.critical_window.minute=10
