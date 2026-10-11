@@ -221,6 +221,7 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
     FrameworkResOverlayArete \
     SystemUIResOverlayArete
+    WifiResOverlayArete
 
 # Lights
 PRODUCT_PACKAGES += \
