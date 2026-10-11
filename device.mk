@@ -103,7 +103,7 @@ PRODUCT_PACKAGES += \
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2460
-TARGET_SCREEN_WIDTH := 1080    
+TARGET_SCREEN_WIDTH := 1080
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
@@ -222,19 +222,10 @@ PRODUCT_PACKAGES += \
     init.sensor_2_0.rc \
     ueventd.mt6789.rc
 
-# Overlays
-PRODUCT_ENFORCE_RRO_TARGETS := *
-PRODUCT_PACKAGES += \
-    FrameworkResOverlayArete \
-    SettingsResOverlayArete \
-    SystemUIResOverlayArete \
-    TetheringResOverlayArete \
-    WifiResOverlayArete
-
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.lights-service.transsion
-    
+
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/mtk-tpd.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/mtk-tpd.kl
@@ -293,6 +284,15 @@ PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     Tag
 
+# Overlays
+PRODUCT_ENFORCE_RRO_TARGETS := *
+PRODUCT_PACKAGES += \
+    FrameworkResOverlayArete \
+    SettingsResOverlayArete \
+    SystemUIResOverlayArete \
+    TetheringResOverlayArete \
+    WifiResOverlayArete
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
@@ -316,7 +316,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.dynamic.head_tracker.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.dynamic.head_tracker.xml \
     frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.gyroscope.xml \
     frameworks/native/data/etc/android.hardware.sensor.light.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.light.xml \
-	    frameworks/native/data/etc/android.hardware.sensor.proximity.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.proximity.xml \
+    frameworks/native/data/etc/android.hardware.sensor.proximity.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.proximity.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepcounter.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepdetector.xml \
     frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.uicc.xml \
@@ -446,10 +446,17 @@ PRODUCT_SOONG_NAMESPACES += \
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal-service.mediatek
-    
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
-    
+
+# USB
+$(call soong_config_set,android_hardware_mediatek_usb,audio_accessory_supported,true)
+
+PRODUCT_PACKAGES += \
+    android.hardware.usb-service.mediatek \
+    android.hardware.usb.gadget-service.mediatek
+
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.transsion
@@ -463,13 +470,6 @@ PRODUCT_PACKAGES += \
     libstagefright_foundation-v33 \
     libprocessgroup_shim:64 \
     libutils-v31
-
-# USB
-$(call soong_config_set,android_hardware_mediatek_usb,audio_accessory_supported,true)
-
-PRODUCT_PACKAGES += \
-    android.hardware.usb-service.mediatek \
-    android.hardware.usb.gadget-service.mediatek
 
 # vndservice
 PRODUCT_PACKAGES += \
