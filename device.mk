@@ -170,6 +170,9 @@ PRODUCT_PACKAGES += \
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Enable DM file pre-opting to reduce first boot time
+PRODUCT_DEX_PREOPT_GENERATE_DM_FILES := true
+
 # Enforce generic ramdisk allow list
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 
@@ -238,16 +241,9 @@ PRODUCT_PACKAGES += \
     init.sensor_2_0.rc \
     ueventd.mt6789.rc
 
-# Lights
-PRODUCT_PACKAGES += \
-    android.hardware.light-service.lineage
-
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/mtk-tpd.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/mtk-tpd.kl
-
-# Enable DM file pre-opting to reduce first boot time
-PRODUCT_DEX_PREOPT_GENERATE_DM_FILES := true
 
 # Keymaster
 PRODUCT_COPY_FILES += \
@@ -260,6 +256,10 @@ PRODUCT_PACKAGES += \
     android.hardware.security.sharedsecret-V1-ndk.vendor:64 \
     android.hardware.security.rkp-V3-ndk.vendor \
     libcppbor_external.vendor:64
+
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light-service.lineage
 
 # Linker
 PRODUCT_VENDOR_LINKER_CONFIG_FRAGMENTS += \
@@ -315,8 +315,8 @@ PRODUCT_PACKAGES += \
 
 # Lineage-Specific Overlays
 PRODUCT_PACKAGES += \
-	ApertureOverlay
-    
+    ApertureOverlay
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
