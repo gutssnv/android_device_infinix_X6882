@@ -1147,7 +1147,7 @@ vendor/lib64/libstfaceunlockppl.so
 vendor/lib64/libtrancamJsonConvertor.so
 vendor/lib64/libtrancam_filelockmgr.so
 vendor/lib64/libtranssion_forkexecwrap.so
-vendor/lib64/libvideofilmeffect.so;DISABLE_CHECKELF
+vendor/lib64/libvideofilmeffect.so
 vendor/lib64/libvideofilter_cl_64.so
 vendor/lib64/vendor.mediatek.hardware.camera.atms@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.bgservice@1.0.so
