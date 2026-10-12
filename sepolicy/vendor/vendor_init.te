@@ -2,6 +2,14 @@ allow vendor_init cgroup:file rw_file_perms;
 allow vendor_init proc:file write;
 allow vendor_init proc_watermark_boost_factor:file w_file_perms;
 
+allow vendor_init sysfs_ged:dir search;
+allow vendor_init sysfs_ged:file w_file_perms;
+
+allow vendor_init sysfs_dvfsrc_devfreq:dir r_dir_perms;
+allow vendor_init sysfs_dvfsrc_devfreq:file rw_file_perms;
+
+allow vendor_init proc_sched:file w_file_perms;
+
 set_prop(vendor_init, vendor_camera_prop)
 set_prop(vendor_init, vendor_mtk_audiohal_prop)
 set_prop(vendor_init, vendor_mtk_audio_prop)
