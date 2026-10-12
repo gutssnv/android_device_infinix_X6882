@@ -11,7 +11,24 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/infinix/X6882/device.mk)
 
 # Inherit some common Lineage stuff.
+TARGET_DISABLE_EPPE := true
+LINEAGE_VERSION_APPEND_TIME_OF_DAY := true
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
+AXION_MAINTAINER := ー々hans.
+AXION_PROCESSOR := Mediatek_Helio_G100
+AXION_CAMERA_REAR_INFO := 50
+AXION_CAMERA_FRONT_INFO := 8
+TARGET_ENABLE_BLUR := true
+PERF_ANIM_OVERRIDE := true
+
+GPU_FREQS_PATH := /sys/devices/platform/soc/13000000.mali/devfreq/13000000.mali/available_frequencies
+GPU_MIN_FREQ_PATH := /sys/devices/platform/soc/13000000.mali/devfreq/13000000.mali/min_freq
+
+PERF_GOV_SUPPORTED := false
+PERF_DEFAULT_GOV := reflex
+
+TARGET_INCLUDES_LOS_PREBUILTS := true
 
 BOARD_VENDOR := INFINIX
 PRODUCT_NAME := lineage_X6882
@@ -25,6 +42,3 @@ PRODUCT_GMS_CLIENTID_BASE := android-transsion
 PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceName=X6882 \
     BuildFingerprint=Infinix/X6882-OP/Infinix-X6882:14/UP1A.231005.007/260411V1590:user/release-keys
-
-# Time
-LINEAGE_VERSION_APPEND_TIME_OF_DAY := true
