@@ -91,6 +91,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libbinder.so', 'libbinder-v31.so')
         .replace_needed('libutils.so', 'libutils-v31.so')
         .add_needed('libcamera_metadata_shim.so'),
+    'vendor/lib64/vendor.silead.hardware.fingerprintext@1.0.so': blob_fixup()
+        .replace_needed('libhidlbase.so', 'libhidlbase-v31.so'),
     'vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc': blob_fixup()
         .regex_replace('start', 'enable'),
     ('vendor/bin/mnld', 'vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so', 'vendor/lib64/mt6789/libaalservice.so', 'vendor/lib64/mt6789/libcam.utils.sensorprovider.so'): blob_fixup()
