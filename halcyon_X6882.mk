@@ -11,10 +11,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/infinix/X6882/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/halcyon/config/common.mk)
 
 BOARD_VENDOR := INFINIX
-PRODUCT_NAME := lineage_X6882
+PRODUCT_NAME := halcyon_X6882
 PRODUCT_DEVICE := X6882
 PRODUCT_MANUFACTURER := INFINIX
 PRODUCT_BRAND := Infinix
