@@ -40,6 +40,7 @@ vendor/lib64/libbessound_hd_mtk_vendor.so
 vendor/lib64/libblisrc32_vendor.so
 vendor/lib64/libbwc.so
 vendor/lib64/libcvsd_mtk.so
+vendor/lib64/libkaraoke.so
 vendor/lib64/libmsbc_mtk.so
 vendor/lib64/libmtklimiter_vendor.so
 vendor/lib64/libmtkshifter_vendor.so
@@ -1817,7 +1818,6 @@ vendor/bin/mcDriverDaemon
 vendor/etc/init/tee.rc
 vendor/etc/init/trustonic.rc
 vendor/etc/init/vendor.trustonic.tee@1.1-service.rc
-vendor/lib/libTEECommon.so;DISABLE_CHECKELF
 vendor/lib/libgz_gp_client.so;DISABLE_CHECKELF
 vendor/lib/libgz_uree.so;DISABLE_CHECKELF
 vendor/lib64/libTEECommon.so
