@@ -509,7 +509,6 @@ PRODUCT_PACKAGES += \
    vndservice
 
 # Wi-Fi
-$(call soong_config_set_bool,wpa_supplicant_8,wifi_disable_multi_akm,true)
 PRODUCT_PACKAGES += \
     libwifi-hal-wrapper:64 \
     wpa_supplicant \
