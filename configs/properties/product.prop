@@ -19,3 +19,6 @@ bluetooth.profile.sap.server.enabled?=true
 
 # F2FS
 persist.fsck.disable_linear_lookup=on
+
+# UI
+persist.sys.activity_anim_perf_override=true
