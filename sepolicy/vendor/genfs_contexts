@@ -44,5 +44,4 @@ genfscon sysfs /devices/virtual/torch/torch/torch_level                         
 genfscon sysfs /devices/virtual/wide_torch/wide_torch/wide_torch_level                              u:object_r:sysfs_wide_torch_file:s0
 
 # aw87xxx vmax
-genfscon sysfs /devices/platform/1101a000.i2c7/i2c-7/7-0058/vmax u:object_r:aw87xxx_vmax:s0
-
+genfscon sysfs /devices/platform/soc/11f00000.i2c/i2c-7/7-0058/vmax u:object_r:aw87xxx_vmax:s0
