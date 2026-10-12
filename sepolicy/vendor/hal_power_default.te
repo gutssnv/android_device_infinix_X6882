@@ -12,10 +12,6 @@ allow hal_power_default sysfs_gpu:file rw_file_perms;
 # Allow libperfmgr to control cpu frequencies
 allow hal_power_default sysfs_devices_system_cpu:file rw_file_perms;
 
-# Allow libperfmgr to control GPU boost
-allow hal_power_default sysfs_ged:dir r_dir_perms;
-allow hal_power_default sysfs_ged:file rw_file_perms;
-
 r_dir_file(hal_power_default, proc_gpufreqv2)
 allow hal_power_default proc_gpufreqv2:file rw_file_perms;
 
@@ -26,10 +22,3 @@ allow hal_power_default sysfs_dvfsrc_devfreq:file rw_file_perms;
 # Allow libperfmgr to control task turbo
 r_dir_file(hal_power_default, sysfs_task_turbo)
 allow hal_power_default sysfs_task_turbo:file w_file_perms;
-
-# Allow libperfmgr to control CPU DMA Latency
-allow hal_power_default cpu_dma_latency_device:chr_file w_file_perms;
-
-# Allow libperfmgr to control CciFreq
-allow hal_power_default sysfs_cm_mgr:dir r_dir_perms;
-allow hal_power_default sysfs_cm_mgr:file rw_file_perms;
