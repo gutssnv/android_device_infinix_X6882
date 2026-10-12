@@ -25,6 +25,8 @@ remote_provisioning.connect_timeout_millis=2000
 remote_provisioning.enable_rkpd=true
 remote_provisioning.hostname=remoteprovisioning.googleapis.com
 
+# UI
+persist.sys.activity_anim_perf_override=true
+
 # zRAM
 ro.zram_backing_device_min_free_mb=1536
-
