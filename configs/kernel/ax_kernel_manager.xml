@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kernel-manager>
+    <cpu
+        id="little"
+        group="Little Cluster"
+        minId="axion_min_freq"
+        maxId="axion_max_freq"
+        governorId="little_cpu_governor"
+        cpuIds="0-5"
+        node="/sys/devices/system/cpu/cpufreq/policy0" />
+
+    <cpu
+        id="big"
+        group="Big Cluster"
+        minId="axion_min_freq_big"
+        maxId="axion_max_freq_big"
+        governorId="big_cpu_governor"
+        cpuIds="6-7"
+        node="/sys/devices/system/cpu/cpufreq/policy6" />
+
+    <gpu
+        node="/sys/class/devfreq/13000000.mali"
+        currentNode="/sys/class/devfreq/13000000.mali/cur_freq"
+        availablePath="/sys/class/devfreq/13000000.mali/available_frequencies"
+        frequencyMultiplier="1" />
+</kernel-manager>

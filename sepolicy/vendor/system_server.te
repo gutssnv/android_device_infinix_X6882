@@ -3,4 +3,7 @@ allow system_server sysfs_OTG_CTL_file:file { read write getattr open };
 allow system_server sysfs_vibrator:file { read open getattr write };
 allow system_server app_zygote_tmpfs:file write;
 
+allow system_server sysfs_devices_system_cpu:file { read write open getattr };
+allow system_server sysfs_gpu:file { read write open getattr };
+
 get_prop(system_server, wifi_hal_prop)
