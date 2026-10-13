@@ -26,4 +26,6 @@ remote_provisioning.enable_rkpd=true
 remote_provisioning.hostname=remoteprovisioning.googleapis.com
 
 # zRAM
+mmd.zram.enabled=true
+mmd.zram.writeback.use_nr_tags_prop=true
 ro.zram_backing_device_min_free_mb=1536
