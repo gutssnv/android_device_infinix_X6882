@@ -22,3 +22,6 @@ persist.fsck.disable_linear_lookup=on
 
 # UI
 persist.sys.activity_anim_perf_override=true
+
+# zRAM
+ro.zram_backing_device_min_free_mb=1536
