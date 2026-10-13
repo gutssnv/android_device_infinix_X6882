@@ -26,5 +26,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceName=X6882 \
     BuildFingerprint=Infinix/X6882-OP/Infinix-X6882:14/UP1A.231005.007/260411V1590:user/release-keys
 
+# Lunaris
+WITH_BCR := true
+WITH_GMS := false
+
 # Time
 LINEAGE_VERSION_APPEND_TIME_OF_DAY := true
