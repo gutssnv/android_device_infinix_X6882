@@ -421,11 +421,6 @@ on boot
 #Power Manager
     write /sys/power/pm_freeze_timeout 2000
 
-# end boot time fs tune
-on property:sys.boot_completed=1
-    # Back to default VM settings
-    write /proc/sys/vm/dirty_expire_centisecs 3000
-
 # reset mdmode when modem crash happens in ATM
 on property:vendor.mtk.md1.status=reset
     setprop persist.vendor.atm.mdmode normal
