@@ -20,6 +20,9 @@ bluetooth.profile.sap.server.enabled?=true
 # F2FS
 persist.fsck.disable_linear_lookup=on
 
+# Lunaris
+ro.lunaris.maintainer=ー々hans.
+
 # RKPD
 remote_provisioning.connect_timeout_millis=2000
 remote_provisioning.enable_rkpd=true
@@ -27,4 +30,3 @@ remote_provisioning.hostname=remoteprovisioning.googleapis.com
 
 # zRAM
 ro.zram_backing_device_min_free_mb=1536
-
