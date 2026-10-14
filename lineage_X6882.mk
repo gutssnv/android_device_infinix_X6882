@@ -42,11 +42,11 @@ BYPASS_CHARGE_SUPPORTED := true
 BYPASS_CHARGE_TOGGLE_PATH ?= /sys/devices/platform/charger/bypass_charger
 
 # CPU governor support
-PERF_GOV_SUPPORTED := false
+PERF_GOV_SUPPORTED := true
 PERF_DEFAULT_GOV := schedutil
 
 # GMS
-TARGET_CORE_GMS := true
+TARGET_INCLUDES_LOS_PREBUILTS := true
 
 # GPU
 GPU_FREQS_PATH := /sys/devices/platform/soc/13000000.mali/devfreq/13000000.mali/available_frequencies
