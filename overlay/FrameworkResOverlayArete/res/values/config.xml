@@ -387,8 +387,8 @@
      <array name="config_sfps_sensor_props_0" translatable="false">
           <item>local:0</item>     <!-- displayId -->
           <item>1080</item> <!-- sensorLocationX -->
-          <item>1115</item>  <!-- sensorLocationY -->
-          <item>205</item>  <!-- sensorRadius -->
+          <item>1050</item>  <!-- sensorLocationY -->
+          <item>100</item>  <!-- sensorRadius -->
      </array>
 
      <!-- Whether device supports double tap to wake -->
