@@ -7,4 +7,5 @@ dontaudit ueventd tranfs_block_device:blk_file rw_file_perms;
 
 dontaudit {
   hal_camera_default
+  mtk_hal_camera
 } default_prop:file r_file_perms;
