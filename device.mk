@@ -151,6 +151,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.lmk.medium?=700
 
 # Display
+$(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
+$(call soong_config_set,surfaceflinger,frame_rate_category_min,10)
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.3-service \
     android.hardware.memtrack-service.mediatek

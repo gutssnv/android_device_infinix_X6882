@@ -34,9 +34,23 @@ TARGET_ENABLE_BLUR := true
 TARGET_INCLUDE_AXFX := true
 
 # Camera Spec
-AXION_CAMERA_REAR_INFO := 50MP
-AXION_CAMERA_FRONT_INFO := 8MP
+AXION_CAMERA_REAR_INFO := 50
+AXION_CAMERA_FRONT_INFO := 8
 
 # Bypass
 BYPASS_CHARGE_SUPPORTED := true
 BYPASS_CHARGE_TOGGLE_PATH ?= /sys/devices/platform/charger/bypass_charger
+
+# CPU governor support
+PERF_GOV_SUPPORTED := false
+PERF_DEFAULT_GOV := schedutil
+
+# GMS
+TARGET_CORE_GMS := true
+
+# GPU
+GPU_FREQS_PATH := /sys/devices/platform/soc/13000000.mali/devfreq/13000000.mali/available_frequencies
+GPU_MIN_FREQ_PATH := /sys/devices/platform/soc/13000000.mali/devfreq/13000000.mali/min_freq
+
+# Time
+LINEAGE_VERSION_APPEND_TIME_OF_DAY := true
