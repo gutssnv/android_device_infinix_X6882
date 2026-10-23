@@ -161,7 +161,6 @@ on property:sys.boot_completed=1
 
     # Uclamp tuning
     write /proc/sys/kernel/sched_util_clamp_min_rt_default 96
-    write /proc/sys/kernel/sched_util_clamp_min 128
 
     # Configure DVFS
     write /sys/kernel/ged/hal/dvfs_margin_value 130
