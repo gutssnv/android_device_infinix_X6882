@@ -42,7 +42,7 @@
   "CoolingDevices": [
     {
       "Name": "thermal-devfreq-0",
-      "Type": "CPU"
+      "Type": "GPU"
     },
     {
       "Name": "mutt-pa1",

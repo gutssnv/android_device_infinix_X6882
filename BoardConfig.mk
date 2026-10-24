@@ -158,6 +158,7 @@ TARGET_BOARD_PLATFORM := mt6789
 # Properties
 TARGET_PRODUCT_PROP += $(CONFIGS_PATH)/properties/product.prop
 TARGET_SYSTEM_PROP += $(CONFIGS_PATH)/properties/system.prop
+TARGET_SYSTEM_EXT_PROP += $(CONFIGS_PATH)/properties/system_ext.prop
 TARGET_VENDOR_PROP += $(CONFIGS_PATH)/properties/vendor.prop
 
 # Recovery
@@ -212,11 +213,11 @@ BOARD_AVB_VENDOR_ADD_HASHTREE_FOOTER_ARGS += --hash_algorithm sha256
 BOARD_AVB_VENDOR_DLKM_ADD_HASHTREE_FOOTER_ARGS += --hash_algorithm sha256
 
 # VINTF
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
    $(CONFIGS_PATH)/vintf/device_framework_compatibility_matrix.xml \
    hardware/mediatek/vintf/mediatek_framework_compatibility_matrix.xml
-DEVICE_MANIFEST_FILE := $(CONFIGS_PATH)/vintf/manifest.xml
-DEVICE_MATRIX_FILE := $(CONFIGS_PATH)/vintf/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE += $(CONFIGS_PATH)/vintf/manifest.xml
+DEVICE_MATRIX_FILE += $(CONFIGS_PATH)/vintf/compatibility_matrix.xml
 
 # VNDK
 BOARD_VNDK_VERSION := current

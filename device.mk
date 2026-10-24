@@ -146,6 +146,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
     dalvik.vm.heapmaxfree=48m
 
 # Display
+$(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
+$(call soong_config_set,surfaceflinger,frame_rate_category_min,10)
+
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.3-service \
     android.hardware.memtrack-service.mediatek
@@ -160,6 +163,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     ANGLE
+
+# Dolby
+$(call inherit-product, hardware/dolby/dolby.mk)
 
 # DRM
 PRODUCT_PACKAGES += \
