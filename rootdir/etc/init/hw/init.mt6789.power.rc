@@ -37,7 +37,7 @@ on init
     write /sys/devices/platform/soc/11270000.ufshci/clkgate_enable 0
     write /proc/sys/kernel/sched_util_clamp_min_rt_default 0
 
-   # Set teo as cpu idle governor
+    # Set teo as cpu idle governor
     write /sys/devices/system/cpu/cpuidle/current_governor teo
 
     # update cpus for cpuset cgroup
@@ -48,10 +48,6 @@ on init
     write /dev/cpuset/top-app/cpus 0-7
 
 on post-fs-data
-    # ZRAM Setup
-    write /sys/block/zram0/comp_algorithm lz4
-    write /proc/sys/vm/page-cluster 0
-
     # memory reserve tuning
     write /proc/sys/vm/watermark_boost_factor 0
     write /proc/sys/vm/min_free_kbytes 27386
@@ -106,9 +102,6 @@ on property:sys.boot_completed=1
     write /sys/block/sda/queue/rq_affinity 2
     write /sys/block/sdb/queue/rq_affinity 2
     write /sys/block/sdc/queue/rq_affinity 2
-
-    # Enable ZRAM on boot_complete
-    swapon_all /vendor/etc/fstab.mt6789
 
     write /sys/devices/platform/soc/11270000.ufshci/clkgate_enable 1
     write /proc/sys/kernel/sched_migration_cost_ns 200000
