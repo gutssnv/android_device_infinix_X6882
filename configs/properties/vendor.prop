@@ -183,9 +183,6 @@ vendor.mtk.vdec.waitkeyframeforplay=9
 ro.vendor.pref_scale_enable_cfg=1
 ro.vendor.rc=/vendor/etc/init/hw/
 
-# MTE
-persist.arm64.memtag.system_server=off
-
 # MTK Stuff
 persist.vendor.factory.GB2312=no
 ro.netflix.bsp_rev=MTK6789-35965-1
