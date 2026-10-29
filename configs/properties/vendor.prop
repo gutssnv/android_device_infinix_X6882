@@ -27,6 +27,8 @@ vendor.bluetooth.ldac.abr=true
 
 # Camera
 camera.disable_zsl_mode=1
+persist.camera.HAL3.enabled=1
+persist.vendor.camera.HAL3.enabled=1
 persist.vendor.camera3.pipeline.bufnum.base.imgo=4
 persist.vendor.camera3.pipeline.bufnum.base.lcso=4
 persist.vendor.camera3.pipeline.bufnum.base.rrzo=4
