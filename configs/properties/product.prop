@@ -24,3 +24,6 @@ persist.fsck.disable_linear_lookup=on
 remote_provisioning.connect_timeout_millis=2000
 remote_provisioning.enable_rkpd=true
 remote_provisioning.hostname=remoteprovisioning.googleapis.com
+
+# zRAM
+ro.zram_backing_device_min_free_mb=1536
