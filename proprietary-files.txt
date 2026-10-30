@@ -173,11 +173,8 @@ vendor/lib64/libbt-vendor.so
 
 # Camera
 vendor/bin/hw/mt6789/camerahalserver;SYMLINK=vendor/bin/hw/camerahalserver
-vendor/bin/hw/vendor.transsion.hardware.trancam.trancamserver@1.0-service
 vendor/etc/init/camerahalserver.rc
-vendor/etc/init/vendor.transsion.hardware.trancam.trancamserver@1.0-service.rc
 vendor/etc/vintf/manifest/manifest_cameraprovider.xml
-vendor/etc/vintf/manifest/vendor.transsion.hardware.trancam.trancamserver@1.0.xml
 vendor/etc/anc_siq/cache_s5kjn1_17201892_back_g97
 vendor/etc/anc_siq/cache_s5kjn1_17201892_back_g97_fast
 vendor/etc/anc_siq/cache_s5kjn1_17201906_back_g97
@@ -1114,7 +1111,6 @@ vendor/lib64/libasd.so
 vendor/lib64/libc++_shared.so
 vendor/lib64/libcam3_tranelapsedtime.so
 vendor/lib64/libcam3_tranpriorityctrl.so
-vendor/lib64/libcam3_transerverengine.so
 vendor/lib64/libcam.seninfn3d.so
 vendor/lib64/libcamalgo.3dnr.so
 vendor/lib64/libcamalgo.dngop.so
@@ -1154,7 +1150,6 @@ vendor/lib64/vendor.mediatek.hardware.camera.lomoeffect@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mdmonitor@1.0.so
-vendor/lib64/vendor.transsion.hardware.trancam.trancamserver@1.0.so
 
 # Camera Configs
 vendor/raw_hdr/params_bin/gc08a8_EXPO_BRACKET_HDR_basic.bin
