@@ -20,7 +20,6 @@ AXION_PROCESSOR := Mediatek_Helio_G100
 AXION_CAMERA_REAR_INFO := 50
 AXION_CAMERA_FRONT_INFO := 8
 TARGET_ENABLE_BLUR := true
-PERF_ANIM_OVERRIDE := true
 
 GPU_FREQS_PATH := /sys/devices/platform/soc/13000000.mali/devfreq/13000000.mali/available_frequencies
 GPU_MIN_FREQ_PATH := /sys/devices/platform/soc/13000000.mali/devfreq/13000000.mali/min_freq

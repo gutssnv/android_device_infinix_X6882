@@ -11,6 +11,7 @@ ro.config.vc_call_vol_steps=9
 # Blur
 ro.sf.blurs_are_expensive=1
 ro.surface_flinger.supports_background_blur=1
+debug.renderengine.blur_algorithm=kawase2
 
 # Camera
 vendor.camera.tran.nums=1
@@ -46,9 +47,6 @@ ro.iorapd.enable=false
 # IPO
 sys.ipo.disable=1
 sys.ipo.pwrdncap=2
-
-# Low Memory Killer
-ro.config.per_app_memcg=false
 
 # Media
 media.stagefright.thumbnail.prefer_hw_codecs=true
