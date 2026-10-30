@@ -26,7 +26,7 @@ GPU_FREQS_PATH := /sys/devices/platform/soc/13000000.mali/devfreq/13000000.mali/
 GPU_MIN_FREQ_PATH := /sys/devices/platform/soc/13000000.mali/devfreq/13000000.mali/min_freq
 
 PERF_GOV_SUPPORTED := false
-PERF_DEFAULT_GOV := reflex
+PERF_DEFAULT_GOV := schedutil
 
 TARGET_INCLUDES_LOS_PREBUILTS := true
 
