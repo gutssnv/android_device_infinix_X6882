@@ -472,6 +472,8 @@ PRODUCT_SHIPPING_API_LEVEL := 33
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
+    hardware/deadlock \
+    hardware/deadlock/libtranlog \
     hardware/mediatek \
     hardware/mediatek/libmtkperf_client \
     hardware/mediatek/libaedv \

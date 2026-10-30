@@ -21,6 +21,8 @@ from extract_utils.main import (
 
 namespace_imports = [
     'device/infinix/X6882',
+    'hardware/deadlock',
+    'hardware/deadlock/libtranlog',
     'hardware/mediatek',
     'hardware/mediatek/libmtkperf_client',
     'hardware/mediatek/libaedv',
