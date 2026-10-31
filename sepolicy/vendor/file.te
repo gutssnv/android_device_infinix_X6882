@@ -23,6 +23,9 @@ type proc_gesture_state, fs_type, proc_type, sysfs_type;
 
 # OTG
 type sysfs_OTG_STATE_file, fs_type, sysfs_type;
+
+# Printk
+type proc_printk, fs_type, proc_type;
 type sysfs_OTG_CTL_file, fs_type, sysfs_type;
 
 # Proc Compaction
