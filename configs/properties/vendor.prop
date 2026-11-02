@@ -215,6 +215,7 @@ ro.vendor.powerhal.gsi_watermark=500
 # PQ
 debug.mediatek.appgamepq_compress=1
 persist.vendor.sys.mtkaal.function=0
+persist.vendor.sys.pq.disp.aal.bypass=1
 ro.vendor.mtk_aal_support=1
 ro.vendor.mtk_pq_color_mode=1
 ro.vendor.mtk_pq_support=2

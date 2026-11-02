@@ -1191,7 +1191,6 @@ vendor/lib64/hw/mt6789/android.hardware.graphics.allocator@4.0-impl-mediatek.so;
 vendor/lib64/hw/mt6789/android.hardware.graphics.mapper@4.0-impl-mediatek.so;SYMLINK=vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
 vendor/lib64/hw/mt6789/vendor.mediatek.hardware.pq@2.15-impl.so;SYMLINK=vendor/lib64/hw/vendor.mediatek.hardware.pq@2.15-impl.so
 vendor/lib64/libaal_cust.so
-vendor/lib64/libaal_key.so
 vendor/lib64/libaal_mtk.so
 vendor/lib64/libdre.so
 vendor/lib64/libOpenCL.so
