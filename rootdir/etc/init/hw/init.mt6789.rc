@@ -369,8 +369,12 @@ on boot
 
     chown system system /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
     chmod 0660 /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
-    chown root   system /sys/kernel/debug/binder/transaction_log_enable
-    chown root   system /sys/kernel/debug/binder/perf_evalue
+
+    # write cpufreq limits
+    chmod 0664 /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
+    chmod 0664 /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq
+    chmod 0664 /sys/devices/system/cpu/cpufreq/policy6/scaling_min_freq
+    chmod 0664 /sys/devices/system/cpu/cpufreq/policy6/scaling_max_freq
 
     chown system system /sys/class/leds/lcd-backlight/trigger
 
@@ -422,15 +426,6 @@ on property:sys.boot_completed=1
     # Back to default VM settings
     write /proc/sys/vm/dirty_expire_centisecs 3000
 
-on property:sys.boot_completed=1
-
 # reset mdmode when modem crash happens in ATM
 on property:vendor.mtk.md1.status=reset
     setprop persist.vendor.atm.mdmode normal
-
-on property:sys.boot_completed=1
-    restart android-hardware-media-c2-hal-1-2
-
-# OTG
-on property:sys.boot_completed=1
-    write /sys/devices/platform/odm/odm:tran_battery/OTG_CTL 1

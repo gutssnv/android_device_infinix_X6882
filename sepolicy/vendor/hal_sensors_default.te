@@ -57,8 +57,6 @@ allow hal_sensors_default sensor_data_file:dir search;
 allow hal_sensors_default hal_graphics_allocator_default:fd use;
 allow hal_sensors_default merged_hal_service:fd use;
 
-binder_call(hal_sensors_default, system_server)
-
 rw_dir_file(hal_sensors_default, nvdata_file)
 rw_dir_file(hal_sensors_default, sensor_data_file)
 

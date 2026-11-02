@@ -52,12 +52,10 @@ on post-fs-data
     chown system system /sys/class/leds/vibrator_single/vbat_monitor
     # BSP:modify for LRA XLWYEHLYEL-1 by hongwu.zhan 20221104 end
 
-on boot
-    # Change owner for GED KPI
-    chown system system /sys/module/sspm_v3/holders/ged/parameters/is_GED_KPI_enabled
-    chmod 0644 /sys/module/sspm_v3/holders/ged/parameters/is_GED_KPI_enabled
+    #SDD:add OTG feature for TESSCR-6368 by weike.xu 20210512 start
+    chmod 0666 /sys/devices/platform/odm/odm:tran_battery/OTG_CTL
+    #SDD:add OTG feature for TESSCR-6368 by weike.xu 20210512 end
 
+# OTG
 on property:sys.boot_completed=1
-    # Disable GED KPI
-    write /sys/module/sspm_v3/holders/ged/parameters/is_GED_KPI_enabled 0
-    chmod 0444 /sys/module/sspm_v3/holders/ged/parameters/is_GED_KPI_enabled
+    write /sys/devices/platform/odm/odm:tran_battery/OTG_CTL 1

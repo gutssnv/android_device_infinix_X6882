@@ -7,6 +7,7 @@ allow hal_fingerprint_default self:netlink_kobject_uevent_socket { read create b
 allow hal_fingerprint_default silead_fpd_device:chr_file { ioctl read write getattr lock append map open watch watch_reads };
 allow hal_fingerprint_default silead_fpd_data_file:file { ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads };
 allow hal_fingerprint_default silead_fpd_data_file:dir { ioctl read write create getattr lock open watch watch_reads add_name remove_name search };
+allow hal_fingerprint_default sysfs_batteryinfo:dir search;
 allow hal_fingerprint_default sysfs_fp_name_path:dir r_dir_perms;
 allow hal_fingerprint_default sysfs_fp_name_path:file rw_file_perms;
 allow hal_fingerprint_default vndbinder_device:chr_file { ioctl read write getattr lock append map open watch watch_reads };
@@ -25,3 +26,5 @@ hal_client_domain(hal_fingerprint_default, hal_health)
 get_prop(hal_fingerprint_default, boot_status_prop)
 get_prop(hal_fingerprint_default, vendor_fingerprint_prop)
 set_prop(hal_fingerprint_default, vendor_fingerprint_prop)
+get_prop(hal_fingerprint_default, vendor_silead_fp_prop)
+set_prop(hal_fingerprint_default, vendor_silead_fp_prop)

@@ -27,6 +27,8 @@ vendor.bluetooth.ldac.abr=true
 
 # Camera
 camera.disable_zsl_mode=1
+persist.camera.HAL3.enabled=1
+persist.vendor.camera.HAL3.enabled=1
 persist.vendor.camera3.pipeline.bufnum.base.imgo=4
 persist.vendor.camera3.pipeline.bufnum.base.lcso=4
 persist.vendor.camera3.pipeline.bufnum.base.rrzo=4
@@ -84,7 +86,6 @@ debug.sf.region_sampling_duration_ns=8333333
 debug.sf.region_sampling_period_ns=99999984
 debug.sf.region_sampling_timer_timeout_ns=99999984
 debug.sf.treat_170m_as_sRGB=1
-ro.surface_flinger.enable_frame_rate_override=false
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 ro.surface_flinger.game_default_frame_rate_override=120
 ro.surface_flinger.has_wide_color_display=true
@@ -126,6 +127,30 @@ ro.hardware.gralloc=common
 ro.hardware.hwcomposer=mtk_common
 ro.hardware.vulkan=mali
 ro.opengles.version=196610
+ro.vendor.arm.egl.configs.r8_g8_b8_a8_32bit_fixed.hal_format=0x1
+ro.vendor.arm.egl.configs.r8_g8_b8_a8_32bit_fixed.recordable=true
+ro.vendor.arm.egl.configs.r8_g8_b8_a8_32bit_fixed.framebuffer_target=false
+ro.vendor.arm.egl.configs.r8_g8_b8_a0_32bit_fixed.hal_format=0x2
+ro.vendor.arm.egl.configs.r8_g8_b8_a0_32bit_fixed.recordable=false
+ro.vendor.arm.egl.configs.r8_g8_b8_a0_32bit_fixed.framebuffer_target=false
+ro.vendor.arm.egl.configs.r8_g8_b8_a0_24bit_fixed.hal_format=0x2
+ro.vendor.arm.egl.configs.r8_g8_b8_a0_24bit_fixed.recordable=false
+ro.vendor.arm.egl.configs.r8_g8_b8_a0_24bit_fixed.framebuffer_target=false
+ro.vendor.arm.egl.configs.r5_g6_b5_a0_16bit_fixed.hal_format=0x4
+ro.vendor.arm.egl.configs.r5_g6_b5_a0_16bit_fixed.recordable=false
+ro.vendor.arm.egl.configs.r5_g6_b5_a0_16bit_fixed.framebuffer_target=false
+ro.vendor.arm.egl.configs.r10_g10_b10_a2_32bit_fixed.hal_format=0x2b
+ro.vendor.arm.egl.configs.r10_g10_b10_a2_32bit_fixed.recordable=false
+ro.vendor.arm.egl.configs.r10_g10_b10_a2_32bit_fixed.framebuffer_target=false
+ro.vendor.arm.egl.configs.r16_g16_b16_a16_64bit_float.hal_format=0x16
+ro.vendor.arm.egl.configs.r16_g16_b16_a16_64bit_float.recordable=false
+ro.vendor.arm.egl.configs.r16_g16_b16_a16_64bit_float.framebuffer_target=false
+ro.vendor.arm.egl.configs.r8_g8_b8_a0_24bit_yuv_special.hal_format=0x23
+ro.vendor.arm.egl.configs.r8_g8_b8_a0_24bit_yuv_special.framebuffer_target=false
+
+# HWUI
+debug.hwui.target_cpu_time_percent=30
+debug.hwui.use_hint_manager=true
 
 # Incremental FS
 ro.incremental.enable=yes
@@ -154,15 +179,11 @@ ro.vendor.jpeg_decode_sw_opt=1
 ro.vendor.mtk_config_max_dram_size=0x800000000
 ro.vendor.mtk_sec_video_path_support=1
 ro.vendor.mtk_video_hevc_enc_support=1
-vendor.media.omx=0
 vendor.mtk.vdec.waitkeyframeforplay=9
 
 # Misc
 ro.vendor.pref_scale_enable_cfg=1
 ro.vendor.rc=/vendor/etc/init/hw/
-
-# MTE
-persist.arm64.memtag.system_server=off
 
 # MTK Stuff
 persist.vendor.factory.GB2312=no
@@ -256,6 +277,7 @@ persist.vendor.vonr_setting_support=0
 persist.vendor.xfrm_support=1
 ro.telephony.default_network=9,9,9,9
 ro.telephony.iwlan_operation_mode=AP-assisted
+ro.telephony.sim.count=2
 ro.vendor.md_auto_setup_ims=1
 ro.vendor.md_prop_ver=1
 ro.vendor.mtk_c2k_lte_mode=0
@@ -271,15 +293,11 @@ ro.vendor.mtk_protocol1_rat_config=Lf/Lt/W/G
 ro.vendor.mtk_ps1_rat=Lf/Lt/W/G
 ro.vendor.mtk_ril_mode=c6m_1rild
 ro.vendor.mtk_rild_read_imsi=1
+ro.vendor.mtk_sim_card_onoff=3
 ro.vendor.mtk_sim_hot_swap_common_slot=1
 ro.vendor.mtk_single_bin_modem_support=1
 ro.vendor.mtk_world_phone_policy=0
 ro.vendor.sim_me_lock_mode=3
-
-# RKPD
-remote_provisioning.connect_timeout_millis=2000
-remote_provisioning.enable_rkpd=true
-remote_provisioning.hostname=remoteprovisioning.googleapis.com
 
 # Sensors
 ro.vendor.mtk.sensor.support=yes
@@ -294,3 +312,12 @@ ro.vendor.mtk_trustonic_tee_support=1
 
 # Virtual A/B
 ro.virtual_ab.compression.threads=true
+
+# USB
+vendor.usb.controller=musb-hdrc
+
+# Wi-Fi
+ro.vendor.wifi.sap.concurrent.iface=ap1
+ro.vendor.wifi.sap.interface=ap0
+ro.vendor.wlan.chrdev=wmt_chrdev_wifi
+ro.vendor.wlan.gen=gen4m_6789
