@@ -1,0 +1,6 @@
+cc_library_shared {
+    name: "libtranlog",
+    vendor: true,
+    srcs: ["fyt.c"],
+    shared_libs: ["liblog"],
+}
