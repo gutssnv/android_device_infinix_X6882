@@ -15,6 +15,7 @@ $(call inherit-product, vendor/yaap/config/common_full_phone.mk)
 
 TARGET_BOARD_PLATFORM := mt6789
 TARGET_BUILD_GAPPS := true
+TARGET_DISABLE_MATLOG := true
 TARGET_ENABLE_BLUR := true
 
 BOARD_VENDOR := INFINIX
