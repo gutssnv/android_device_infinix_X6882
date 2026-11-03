@@ -1,5 +1,8 @@
 # Audio
-vendor.audiomediatek. u:object_r:vendor_audioserver_prop:s0
+vendor.audiomediatek.                u:object_r:vendor_audioserver_prop:s0
+persist.vendor.rm.debug.             u:object_r:vendor_mtk_audio_prop:s0
+vendor.usbsph.                       u:object_r:vendor_mtk_audio_prop:s0
+ro.vendor.mtk_audio_tuning_tool_ver  u:object_r:vendor_mtk_audio_prop:s0
 
 # Camera
 persist.vendor.camera.                      u:object_r:vendor_camera_prop:s0
@@ -8,6 +11,20 @@ ro.mtk_cam_stereo_camera_support            u:object_r:vendor_mtk_camera_prop:s0
 vendor.debug.seninf.hs_trail                u:object_r:vendor_mtk_camera_prop:s0
 ro.vendor.camera_tran_hal_server_support    u:object_r:vendor_mtk_camera_prop:s0
 ro.vendor.camera_tran_fake_stereo_support   u:object_r:vendor_mtk_camera_prop:s0
+persist.vendor.cam.param.front.version       u:object_r:vendor_mtk_camera_prop:s0
+persist.vendor.camera3.pipeline.             u:object_r:vendor_mtk_camera_prop:s0
+persist.vendor.cam.                          u:object_r:vendor_mtk_camera_prop:s0
+vendor.camera.mdp.cz.enable                  u:object_r:vendor_mtk_camera_prop:s0
+vendor.camera.mdp.dre.enable                 u:object_r:vendor_mtk_camera_prop:s0
+vendor.camera.tran.nums                      u:object_r:vendor_mtk_camera_prop:s0
+vendor.camera.mdp.                           u:object_r:vendor_mtk_camera_prop:s0
+vendor.camera.tran.                          u:object_r:vendor_mtk_camera_prop:s0
+ro.vendor.camera3.zsl.default                u:object_r:vendor_mtk_camera_prop:s0
+ro.vendor.camera.isp.support.colorspace      u:object_r:vendor_mtk_camera_prop:s0
+ro.vendor.camera.                            u:object_r:vendor_mtk_camera_prop:s0
+ro.vendor.camera3.                           u:object_r:vendor_mtk_camera_prop:s0
+ro.vendor.camkit_enabled                     u:object_r:vendor_mtk_camera_prop:s0
+ro.vendor.smvr.                              u:object_r:vendor_mtk_camera_prop:s0
 
 RUNTIME_OVERRIDE_OPENCL_MEM_TYPE            u:object_r:exported_default_prop:s0
 RUNTIME_OVERRIDE_LOG_LEVEL                  u:object_r:exported_default_prop:s0
@@ -22,6 +39,7 @@ vendor.dynamic_sensor.                          u:object_r:vendor_dynamic_sensor
 # Fingerprint
 persist.vendor.goodix.dump_data             u:object_r:vendor_fingerprint_prop:s0
 persist.vendor.sys.fp.goodix.spmt.flag      u:object_r:vendor_fingerprint_prop:s0
+persist.vendor.sys.fp.dump_data             u:object_r:vendor_fingerprint_prop:s0
 vendor.fp.goodix.X.offset                   u:object_r:vendor_fingerprint_prop:s0
 vendor.fp.goodix.Y.offset                   u:object_r:vendor_fingerprint_prop:s0
 vendor.silead.fp.ext.                       u:object_r:vendor_silead_fp_prop:s0
@@ -39,6 +57,3 @@ persist.vendor.nfc.            u:object_r:vendor_nfc_prop:s0
 
 # TEE property
 vendor.tee.googlekey.status                          u:object_r:vendor_mtk_trustonic_tee_prop:s0
-
-# VT
-ro.vendor.vt.                               u:object_r:vendor_mtk_vendor_vt_prop:s0
