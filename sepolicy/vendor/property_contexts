@@ -40,6 +40,7 @@ vendor.dynamic_sensor.                          u:object_r:vendor_dynamic_sensor
 persist.vendor.goodix.dump_data             u:object_r:vendor_fingerprint_prop:s0
 persist.vendor.sys.fp.goodix.spmt.flag      u:object_r:vendor_fingerprint_prop:s0
 persist.vendor.sys.fp.dump_data             u:object_r:vendor_fingerprint_prop:s0
+ro.vendor.tran.fp.support                   u:object_r:vendor_fingerprint_prop:s0
 vendor.fp.goodix.X.offset                   u:object_r:vendor_fingerprint_prop:s0
 vendor.fp.goodix.Y.offset                   u:object_r:vendor_fingerprint_prop:s0
 vendor.silead.fp.ext.                       u:object_r:vendor_silead_fp_prop:s0
