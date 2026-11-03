@@ -160,14 +160,9 @@ ro.hardware.kmsetkey=trustonic
 ro.vendor.transsion.backlight_12bit=1
 
 # LMK tuning
-ro.lmk.debug=false
-ro.lmk.kill_heaviest_task=true
-ro.lmk.kill_timeout_ms=100
-ro.lmk.psi_complete_stall_ms=150
-ro.lmk.swap_free_low_percentage=20
-ro.lmk.swap_util_max=90
-ro.lmk.thrashing_limit=25
-ro.lmk.thrashing_limit_decay=50
+ro.lmk.filecache_min_kb=153600
+ro.lmk.kill_timeout_ms=50
+ro.lmk.stall_limit_critical=40
 
 # Media
 media.c2.hal.selection=aidl
