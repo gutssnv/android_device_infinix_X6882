@@ -4,4 +4,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_X6882.mk
+    $(LOCAL_DIR)/custom_X6882.mk

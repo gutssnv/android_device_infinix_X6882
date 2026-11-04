@@ -10,11 +10,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from X6882 device
 $(call inherit-product, device/infinix/X6882/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Pixelos stuff.
+$(call inherit-product, vendor/custom/config/common_full_phone.mk)
+TARGET_SCREEN_WIDTH := 1080
 
 BOARD_VENDOR := INFINIX
-PRODUCT_NAME := lineage_X6882
+PRODUCT_NAME := custom_X6882
 PRODUCT_DEVICE := X6882
 PRODUCT_MANUFACTURER := INFINIX
 PRODUCT_BRAND := Infinix
@@ -25,6 +26,3 @@ PRODUCT_GMS_CLIENTID_BASE := android-transsion
 PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceName=X6882 \
     BuildFingerprint=Infinix/X6882-OP/Infinix-X6882:14/UP1A.231005.007/260411V1590:user/release-keys
-
-# Time
-LINEAGE_VERSION_APPEND_TIME_OF_DAY := true
