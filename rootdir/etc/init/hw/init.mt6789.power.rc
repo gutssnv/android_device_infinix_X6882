@@ -1,4 +1,7 @@
 on early-init
+    # Reset PELT multiplier from boot-time 4x (cmdline) to 2x (16ms half-life)
+    write /proc/sys/kernel/sched_pelt_multiplier 2
+
     # boot perf. tune
     write /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq 2000000
     write /sys/devices/system/cpu/cpufreq/policy6/scaling_min_freq 2200000
@@ -32,9 +35,6 @@ on property:vendor.all.modules.ready=1
     write /sys/devices/system/cpu/cpufreq/policy6/schedutil/down_rate_limit_us 1000
 
 on init
-    # Set PELT multiplier to 2, which is equivalent to a 16ms half-life.
-    write /proc/sys/kernel/sched_pelt_multiplier 2
-
     write /sys/devices/platform/soc/11270000.ufshci/clkgate_enable 0
     write /proc/sys/kernel/sched_util_clamp_min_rt_default 0
 
