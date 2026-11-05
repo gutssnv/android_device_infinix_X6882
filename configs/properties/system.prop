@@ -54,6 +54,9 @@ ro.config.per_app_memcg=false
 media.stagefright.thumbnail.prefer_hw_codecs=true
 vendor.mtk_thumbnail_optimization=true
 
+# MTE
+persist.arm64.memtag.system_server=off
+
 # Performance
 security.perf_harden=1
 
