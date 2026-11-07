@@ -19,6 +19,12 @@ on init
     write /proc/sys/net/core/rmem_max 8388608
 
    # Setup runtime blkio
+    # Make foreground and background I/O priority different. none-to-rt was
+    # introduced in kernel 5.14. promote-to-rt was introduced in kernel 6.5.
+    # Write none-to-rt first and promote-to-rt next to support both older and
+    # newer kernel versions.
+    write /dev/blkio/blkio.prio.class none-to-rt
+    write /dev/blkio/blkio.prio.class promote-to-rt
     write /dev/blkio/blkio.weight 1000
     write /dev/blkio/background/blkio.weight 200
     write /dev/blkio/blkio.group_idle 2000
@@ -59,7 +65,6 @@ on property:sys.boot_completed=1
 on fs
     # mount fstab
     mount_all --early
-    exec /system/bin/tune2fs -O has_journal -u 10010 -r 4096 /dev/block/by-name/userdata
 
 on late-fs
     mount_all --late
@@ -101,30 +106,10 @@ on post-fs-data
     chown root system /mnt/vendor/cct
     chmod 0771 /mnt/vendor/cct
 
-    #Create flash folder
-    mkdir /data/vendor/flash
-    chown root system /data/vendor/flash
-    chmod 0771 /data/vendor/flash
-
-    #Create shading mount point
-    mkdir /data/vendor/shading
-    chown root system /data/vendor/shading
-    chmod 0771 /data/vendor/shading
-
-    #Create shading_otp mount point
-    mkdir /data/vendor/shading_otp
-    chown root system /data/vendor/shading_otp
-    chmod 0771 /data/vendor/shading_otp
-
     #Create NDD mount point
     mkdir /data/vendor/camera_dump
     chown root system /data/vendor/camera_dump
     chmod 0771 /data/vendor/camera_dump
-
-    #Create Camera Dip Debug Folder
-    mkdir /data/vendor/dipdebug
-    chown root system /data/vendor/dipdebug
-    chmod 0771 /data/vendor/dipdebug
 
     #Create flicker mount point
     mkdir /data/vendor/flicker
@@ -303,22 +288,11 @@ on post-fs-data
     chown media media /dev/usip
 
   	#Thermal
-	  mkdir /data/vendor/.tp/ 0775 system system
 	  mkdir /data/vendor/thermal/ 0775 system system
 
     #MCUPM log
     chmod 0440 /dev/mcupm
     chown root system /dev/mcupm
-
-    #EM of MT6360
-    chmod 0664 sys/kernel/debug/rt-regmap/mt6360_pmu.5-0034/data
-    chmod 0664 sys/kernel/debug/rt-regmap/mt6360_pmic.5-001a/data
-    chmod 0664 sys/kernel/debug/rt-regmap/mt6360_ldo.5-0064/data
-    chmod 0664 sys/kernel/debug/rt-regmap/mt6360-4e/data
-    chmod 0664 sys/kernel/debug/rt-regmap/mt6360_pmu.5-0034/reg_addr
-    chmod 0664 sys/kernel/debug/rt-regmap/mt6360_pmic.5-001a/reg_addr
-    chmod 0664 sys/kernel/debug/rt-regmap/mt6360_ldo.5-0064/reg_addr
-    chmod 0664 sys/kernel/debug/rt-regmap/mt6360-4e/reg_addr
 
 	#widevine driver node
 	chmod 0660 /dev/drm_wv
@@ -371,6 +345,10 @@ on boot
     chmod 0660 /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
 
     # write cpufreq limits
+    chown system system /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
+    chown system system /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq
+    chown system system /sys/devices/system/cpu/cpufreq/policy6/scaling_min_freq
+    chown system system /sys/devices/system/cpu/cpufreq/policy6/scaling_max_freq
     chmod 0664 /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
     chmod 0664 /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq
     chmod 0664 /sys/devices/system/cpu/cpufreq/policy6/scaling_min_freq
