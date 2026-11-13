@@ -120,6 +120,7 @@ ro.vendor.mtk_log_hide_gps=1
 
 # Graphics
 debug.graphics.game_default_frame_rate.disabled=true
+debug.renderengine.backend=skiavk
 ro.hardware.egl=mali
 ro.hardware.gralloc=common
 ro.hardware.hwcomposer=mtk_common
@@ -147,6 +148,7 @@ ro.vendor.arm.egl.configs.r8_g8_b8_a0_24bit_yuv_special.hal_format=0x23
 ro.vendor.arm.egl.configs.r8_g8_b8_a0_24bit_yuv_special.framebuffer_target=false
 
 # HWUI
+debug.hwui.renderer=skiavk
 debug.hwui.target_cpu_time_percent=30
 debug.hwui.use_hint_manager=true
 
